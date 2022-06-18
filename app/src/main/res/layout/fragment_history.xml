@@ -15,16 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_record"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/record"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_history" />
-
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/item_history"
         android:layout_width="409dp"
@@ -137,4 +127,28 @@
                 android:text="4" />
         </TableRow>
     </TableLayout>
+    <Button
+        android:id="@+id/button_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/record"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_history" />
+    <LinearLayout
+        android:id="@+id/print_logs"
+        app:layout_constraintTop_toBottomOf="@id/button_record"
+        android:layout_width="409dp"
+        android:layout_height="219dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="511dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Print Logs here (debugging only)" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
