@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <Button
+            android:id="@+id/button_red"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Red" />
@@ -43,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <Button
+            android:id="@+id/button_green"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Green" />
