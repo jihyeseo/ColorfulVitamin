@@ -37,8 +37,6 @@ class RecordFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
         binding.buttonHistory.setOnClickListener {
             findNavController().navigate(R.id.action_RecordFragment_to_HistoryFragment)
         }
@@ -95,12 +93,13 @@ class RecordFragment : Fragment() {
         if (!firstRecordOfDay) {
             return
         }
-        val keyNames = arrayOf("red", "green")
+        val keyNames = arrayOf("red", "orange", "yellow", "green", "blue", "brown", "cardio", "strength", "flex", "mind")
         // Move all data to previous day data.
         with (sharedPref.edit()) {
             for (key in keyNames) {
+                // Date string format: 2022-06-18
                 val yesterdayValue = sharedPref.getInt(key, 0)
-                putInt(key+lastRecordedAt, yesterdayValue)
+                putInt(key+ "." +lastRecordedAt, yesterdayValue)
                 putInt(key, 0)
             }
             putString(timestampKey, currentTime)
