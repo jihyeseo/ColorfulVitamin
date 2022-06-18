@@ -25,7 +25,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_history" />
 
-    <TableLayout
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/item_history"
         android:layout_width="409dp"
         android:layout_height="460dp"
         tools:layout_editor_absoluteX="1dp"
