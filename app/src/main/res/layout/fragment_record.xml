@@ -6,77 +6,232 @@
     android:layout_height="match_parent"
     tools:context=".RecordFragment">
 
-    <TextView
-        android:id="@+id/textview_record"
+    <TableLayout
+        android:id="@+id/items_to_record"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_record_fragment"
-        app:layout_constraintBottom_toTopOf="@id/items_to_record"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/items_to_record"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_record"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="189dp">
+
+        app:layout_constraintTop_toTopOf="parent">
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <Button
-            android:id="@+id/button_red"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Red" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Strawberry"
-              />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <Button
-            android:id="@+id/button_green"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Green" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Spinach"
-                />
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="@string/hello_record_fragment_eat" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_red"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Red" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Strawberry" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_orange"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Orange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carrot" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_yellow"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Yellow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lemon" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_green"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spinach" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_blue"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blueberry" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_brown"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Brown" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mushroom" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textview_record_move"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="@string/hello_record_fragment_move"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Walk, swim, run" />
+
+            <Button
+                android:id="@+id/button_cardio"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Cardio" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weights, squat" />
+
+            <Button
+                android:id="@+id/button_strength"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Strength" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stretching" />
+
+            <Button
+                android:id="@+id/button_flex"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Flexibility" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="@string/hello_record_fragment_mind" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_mind"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Mind" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meditate, pray" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_span="2"
+                android:text="@string/history"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
         </TableRow>
     </TableLayout>
-    <Button
-        android:id="@+id/button_history"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/history"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/items_to_record" />
-    <LinearLayout
-        android:id="@+id/print_logs"
-        app:layout_constraintTop_toBottomOf="@id/button_history"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="511dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Print Logs here (debugging only)" />
 
-    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

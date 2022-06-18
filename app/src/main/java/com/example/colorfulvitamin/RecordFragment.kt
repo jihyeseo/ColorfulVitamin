@@ -47,8 +47,33 @@ class RecordFragment : Fragment() {
             recordAndNotify(it, "red")
         }
 
+        binding.buttonOrange.setOnClickListener {
+            recordAndNotify(it, "orange")
+        }
+
+        binding.buttonYellow.setOnClickListener {
+            recordAndNotify(it, "yellow")
+        }
         binding.buttonGreen.setOnClickListener {
             recordAndNotify(it, "green")
+        }
+        binding.buttonBlue.setOnClickListener {
+            recordAndNotify(it, "blue")
+        }
+        binding.buttonBrown.setOnClickListener {
+            recordAndNotify(it, "brown")
+        }
+        binding.buttonCardio.setOnClickListener {
+            recordAndNotify(it, "cardio")
+        }
+        binding.buttonStrength.setOnClickListener {
+            recordAndNotify(it, "strength")
+        }
+        binding.buttonFlex.setOnClickListener {
+            recordAndNotify(it, "flex")
+        }
+        binding.buttonMind.setOnClickListener {
+            recordAndNotify(it, "mind")
         }
     }
 
@@ -87,12 +112,12 @@ class RecordFragment : Fragment() {
         cleanDaily()
 
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
-        val prevValue = sharedPref.getInt(key, 0)
+        val value = sharedPref.getInt(key, 0) + 1
         with (sharedPref.edit()) {
-            putInt(key, 1 + prevValue)
+            putInt(key, value)
             apply()
         }
-        val mySnackbar = Snackbar.make(view, "$prevValue $key", Snackbar.LENGTH_SHORT)
+        val mySnackbar = Snackbar.make(view, "$value $key", Snackbar.LENGTH_SHORT)
         mySnackbar.show()
     }
 }

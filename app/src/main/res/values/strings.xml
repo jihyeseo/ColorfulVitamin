@@ -2,11 +2,13 @@
     <string name="app_name">Colorful Vitamin</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="record_fragment_label">Record your eating</string>
+    <string name="record_fragment_label">How healthy is your day, today</string>
     <string name="history_fragment_label">History</string>
     <string name="history">History</string>
     <string name="record">Record</string>
 
-    <string name="hello_record_fragment">Hello, what do you eat now?</string>
+    <string name="hello_record_fragment_eat">Hello, what do you eat now?</string>
+    <string name="hello_record_fragment_move">Feel like moving?</string>
+    <string name="hello_record_fragment_mind">How do you feel?</string>
     <string name="hello_history_fragment">Your vitamin history</string>
 </resources>
